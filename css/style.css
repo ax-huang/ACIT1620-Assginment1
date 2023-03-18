@@ -48,4 +48,9 @@ aside li{
     list-style-type: square;
 }
 
+textarea{
+    margin-left: 1em;
+    width: 97.5%;
+}
+
 
