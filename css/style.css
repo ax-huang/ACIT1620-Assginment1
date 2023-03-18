@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    color: #256993;
     font-family: 'Mukta', sans-serif;
 }
 .grid{
@@ -41,6 +42,10 @@ footer{
 h1, h2{
     color: #256993;
     text-align: center;
+}
+
+aside li{
+    list-style-type: square;
 }
 
 
