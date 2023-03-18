@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Mukta', sans-serif;
 }
 .grid{
     display: grid;
@@ -32,4 +33,12 @@ header{
 footer{
     background-color: #f3e9de;
     grid-area: f;
+    text-align: center;
 }
+
+h1, h2{
+    color: #256993;
+    text-align: center;
+}
+
+
