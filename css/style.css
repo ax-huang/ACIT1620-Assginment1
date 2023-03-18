@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.grid{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 20em repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "a h h h h"
+        "a s s s s"
+        "a s s s s"
+        "a f f f f";
+}
+aside{
+    background-color: #faf4ec;
+    grid-area:  a;
+}
+
+section{
+    background-color: #f3e9de;
+    grid-area:  s;
+}
+
+header{
+    background-color: #f3e9de;
+    grid-area: h;
+}
+
+footer{
+    background-color: #f3e9de;
+    grid-area: f;
+}
