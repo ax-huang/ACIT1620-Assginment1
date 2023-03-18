@@ -31,9 +31,11 @@ header{
 }
 
 footer{
+    display: flex;
+    flex-direction: column;
     background-color: #f3e9de;
+    align-items: center;
     grid-area: f;
-    text-align: center;
 }
 
 h1, h2{
