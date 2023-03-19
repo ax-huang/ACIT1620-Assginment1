@@ -46,8 +46,13 @@ h1, h2{
     text-align: center;
 }
 
+h1{
+    font-size: 2.5em;
+}
+
 aside li{
     list-style-type: square;
+    font-weight:100
 }
 
 button{
@@ -79,8 +84,9 @@ button{
     background-color: #375F68;
 }
 
-#saveButton{
+#cancelButton{
     background-color: #9B332C;
+    margin-left: 0;
 }
 
 #darkThemeButton{
