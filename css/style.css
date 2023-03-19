@@ -106,4 +106,20 @@ button{
     background-color: #56536A;
 }
 
+@media screen and (max-width: 600px){
+
+    .grid{
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr) 9em;
+        grid-template-areas:
+            "header"
+            "aside"
+            "section"
+            "footer";
+    }
+
+}
+
 
