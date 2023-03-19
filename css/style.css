@@ -11,34 +11,35 @@ body{
     grid-template-columns: 20em repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr) 9em;
     grid-template-areas:
-        "a h h h h"
-        "a s s s s"
-        "a s s s s"
-        "a f f f f";
+        "aside header header header header"
+        "aside section section section section"
+        "aside section section section section"
+        "aside footer footer footer footer";
 }
+section, header, footer{
+    background-color: #f3e9de;
+}
+
 aside{
     background-color: #faf4ec;
-    grid-area:  a;
+    grid-area: aside;
 }
 
 section{
     display: flex;
     flex-direction: column;
-    background-color: #f3e9de;
-    grid-area:  s;
+    grid-area: section;
 }
 
 header{
-    background-color: #f3e9de;
-    grid-area: h;
+    grid-area: header;
 }
 
 footer{
     display: flex;
     flex-direction: column;
-    background-color: #f3e9de;
     align-items: center;
-    grid-area: f;
+    grid-area: footer;
 }
 
 h1, h2{
@@ -76,16 +77,16 @@ button{
 
 }
 
+#sectionItem1{
+    display: flex;
+    justify-content: space-between;
+}
+
 #sectionItem2{
     display: flex;
     flex-direction: column;
     margin-left: 1em;
     margin-right: 1em;
-}
-
-#sectionItem1{
-    display: flex;
-    justify-content: space-between;
 }
 
 #sectionItem3{
