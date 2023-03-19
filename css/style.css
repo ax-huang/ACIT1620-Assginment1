@@ -63,6 +63,19 @@ button{
     color: #faf4ec;
 }
 
+#sectionItem0{
+    display: flex;
+    justify-content: end;
+    margin-right: 1em;
+}
+
+#sectionItem0 a:link, a:visited{
+    text-decoration: none;
+    margin-left: 1em;
+    color: #256993;
+
+}
+
 #sectionItem2{
     display: flex;
     flex-direction: column;
