@@ -112,7 +112,7 @@ button{
         width: 100vw;
         height: 100vh;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr) 9em;
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
             "header"
             "aside"
