@@ -8,8 +8,8 @@ body{
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: 20em repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr) 9em;
+    grid-template-columns: 20vw repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr) 20vh;
     grid-template-areas:
         "aside header header header header"
         "aside section section section section"
