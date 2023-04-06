@@ -4,8 +4,10 @@ const newNoteButtonRef = document.querySelector(".newNote_Save_Button")
 const textAreaRef = document.querySelector("#sectionItem2")
 const cancelSaveButtonRef = document.querySelector("#sectionItem3")
 const textAreaValue = document.querySelector("#note")
+const noteContainter = document.querySelector("#noteSection")
+const saveButtonRef = document.querySelector("#saveButton")
 
-const notesArray = []
+const notesArray = [{title : "note one", body : "this is my first note"}, {title : "note two", body : "this is my second note"}]
 
 function darkThemeMode(){
     const sideBarRef = document.querySelector("aside")
@@ -39,25 +41,14 @@ function visible(){
     if (textAreaVisibility === "hidden" && cancelSaveButtonVisibility === "hidden"){
         textAreaRef.style.visibility = "visible"
         cancelSaveButtonRef.style.visibility = "visible"
+    }
+    else{
         textAreaValue.value = ""
     }
 
 }
 newNoteButtonRef.addEventListener("click", visible)
 
-const noteOne = {
-    title : "note one",
-    body : "this is my first note"
-}
-
-const noteTwo = {
-    title : "note two",
-    body : "this is my second note"
-}
-
-notesArray.push(noteOne, noteTwo)
-
-const saveButtonRef = document.querySelector("#saveButton")
 function collectInfo(){
     
     let userInput = prompt("Title for this note")
@@ -73,13 +64,26 @@ function collectInfo(){
 }
 
 function addNote(note){
-    const noteContainter = document.querySelector("#noteSection")
-    newLi = document.createElement("li")
+    let newLi = document.createElement("li")
     newLi.textContent = note.title
 
     noteContainter.appendChild(newLi)
 }
 
 saveButtonRef.addEventListener("click", collectInfo)
+
+function loadNote(event){
+    let titleNote = event.target.textContent
+
+    for (item of notesArray){
+        if(item.title === titleNote){
+            textAreaValue.value = item.body
+        }
+    }
+}
+
+noteContainter.addEventListener("click", loadNote)
+
+
 
 
