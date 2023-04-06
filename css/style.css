@@ -3,6 +3,7 @@ body{
     margin: 0;
     color: #256993;
     font-family: 'Mukta', sans-serif;
+    background-color: #f3e9de;
 }
 .grid{
     display: grid;
@@ -16,9 +17,7 @@ body{
         "aside section section section section"
         "aside footer footer footer footer";
 }
-section, header, footer{
-    background-color: #f3e9de;
-}
+
 
 aside{
     background-color: #faf4ec;
@@ -69,11 +68,8 @@ button{
     margin-right: 1em;
 }
 
-#sectionItem0 a:link, a:visited{
-    text-decoration: none;
+#sectionItem0 p{
     margin-left: 1em;
-    color: #256993;
-
 }
 
 #sectionItem1{
@@ -97,14 +93,30 @@ button{
     background-color: #375F68;
 }
 
-#cancelButton{
+.cancelButton{
     background-color: #9B332C;
     margin-left: 0;
 }
 
-#darkThemeButton{
+.darkThemeButton{
     background-color: #56536A;
+    margin-right: 1.5em;
 }
+
+.noteDarkBG{
+    background-color: #404258;
+    color:#f3e9de;
+}
+
+.sidebarDarkBG{
+    background-color: #474E68
+}
+
+.lightThemeButtonBG{
+    background-color: #497D89;
+}
+
+
 
 @media screen and (max-width: 600px){
 
