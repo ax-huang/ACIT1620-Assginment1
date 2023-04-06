@@ -3,6 +3,7 @@ const cancelButtonRef = document.querySelector(".cancelButton")
 const newNoteButtonRef = document.querySelector(".newNote_Save_Button")
 const textAreaRef = document.querySelector("#sectionItem2")
 const cancelSaveButtonRef = document.querySelector("#sectionItem3")
+const textAreaValue = document.querySelector("#note")
 
 const notesArray = []
 
@@ -32,7 +33,6 @@ function removeButton(){
 cancelButtonRef.addEventListener("click", removeButton)
 
 function visible(){
-    const textAreaValue = document.querySelector("#note")
     textAreaVisibility = textAreaRef.style.visibility
     cancelSaveButtonVisibility = textAreaRef.style.visibility
 
@@ -57,5 +57,21 @@ const noteTwo = {
 
 notesArray.push(noteOne, noteTwo)
 
-console.log(notesArray)
+const saveButtonRef = document.querySelector("#saveButton")
+function collectInfo(){
+    
+    let userInput = prompt("Title for this note")
+
+    const note = {
+        title : userInput,
+        body : textAreaValue.value
+    }
+
+    notesArray.push(note)
+    addNote(note)
+    textAreaValue.value = ""
+}
+
+
+
 
