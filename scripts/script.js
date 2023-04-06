@@ -4,6 +4,8 @@ const newNoteButtonRef = document.querySelector(".newNote_Save_Button")
 const textAreaRef = document.querySelector("#sectionItem2")
 const cancelSaveButtonRef = document.querySelector("#sectionItem3")
 
+const notesArray = []
+
 function darkThemeMode(){
     const sideBarRef = document.querySelector("aside")
     const bodyRef = document.querySelector("body")
@@ -42,4 +44,18 @@ function visible(){
 
 }
 newNoteButtonRef.addEventListener("click", visible)
+
+const noteOne = {
+    title : "note one",
+    body : "this is my first note"
+}
+
+const noteTwo = {
+    title : "note two",
+    body : "this is my second note"
+}
+
+notesArray.push(noteOne, noteTwo)
+
+console.log(notesArray)
 
