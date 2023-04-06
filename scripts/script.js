@@ -72,6 +72,14 @@ function collectInfo(){
     textAreaValue.value = ""
 }
 
+function addNote(note){
+    const noteContainter = document.querySelector("#noteSection")
+    newLi = document.createElement("li")
+    newLi.textContent = note.title
 
+    noteContainter.appendChild(newLi)
+}
+
+saveButtonRef.addEventListener("click", collectInfo)
 
 
