@@ -1,5 +1,8 @@
 const darkThemeButtonRef = document.querySelector(".darkThemeButton")
 const cancelButtonRef = document.querySelector(".cancelButton")
+const newNoteButtonRef = document.querySelector(".newNote_Save_Button")
+const textAreaRef = document.querySelector("#sectionItem2")
+const cancelSaveButtonRef = document.querySelector("#sectionItem3")
 
 function darkThemeMode(){
     const sideBarRef = document.querySelector("aside")
@@ -20,10 +23,23 @@ function darkThemeMode(){
 darkThemeButtonRef.addEventListener("click", darkThemeMode)
 
 function removeButton(){
-    const textAreaRef = document.querySelector("#sectionItem2")
-    const cancelSaveButtonRef = document.querySelector("#sectionItem3")
     textAreaRef.style.visibility = "hidden"
     cancelSaveButtonRef.style.visibility = "hidden"
 }
 
 cancelButtonRef.addEventListener("click", removeButton)
+
+function visible(){
+    const textAreaValue = document.querySelector("#note")
+    textAreaVisibility = textAreaRef.style.visibility
+    cancelSaveButtonVisibility = textAreaRef.style.visibility
+
+    if (textAreaVisibility === "hidden" && cancelSaveButtonVisibility === "hidden"){
+        textAreaRef.style.visibility = "visible"
+        cancelSaveButtonRef.style.visibility = "visible"
+        textAreaValue.value = ""
+    }
+
+}
+newNoteButtonRef.addEventListener("click", visible)
+
