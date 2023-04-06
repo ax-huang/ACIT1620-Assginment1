@@ -25,18 +25,14 @@ function darkThemeMode(){
     darkThemeButtonRef.classList.toggle("lightThemeButtonBG")
 }
 
-darkThemeButtonRef.addEventListener("click", darkThemeMode)
-
 function removeButton(){
     textAreaRef.style.visibility = "hidden"
     cancelSaveButtonRef.style.visibility = "hidden"
 }
 
-cancelButtonRef.addEventListener("click", removeButton)
-
 function visible(){
-    textAreaVisibility = textAreaRef.style.visibility
-    cancelSaveButtonVisibility = textAreaRef.style.visibility
+    let textAreaVisibility = textAreaRef.style.visibility
+    let cancelSaveButtonVisibility = cancelSaveButtonRef.style.visibility
 
     if (textAreaVisibility === "hidden" && cancelSaveButtonVisibility === "hidden"){
         textAreaRef.style.visibility = "visible"
@@ -45,12 +41,9 @@ function visible(){
     else{
         textAreaValue.value = ""
     }
-
 }
-newNoteButtonRef.addEventListener("click", visible)
 
-function collectInfo(){
-    
+function collectNoteInfo(){
     let userInput = prompt("Title for this note")
 
     const note = {
@@ -70,8 +63,6 @@ function addNote(note){
     noteContainter.appendChild(newLi)
 }
 
-saveButtonRef.addEventListener("click", collectInfo)
-
 function loadNote(event){
     let titleNote = event.target.textContent
 
@@ -82,6 +73,10 @@ function loadNote(event){
     }
 }
 
+cancelButtonRef.addEventListener("click", removeButton)
+newNoteButtonRef.addEventListener("click", visible)
+darkThemeButtonRef.addEventListener("click", darkThemeMode)
+saveButtonRef.addEventListener("click", collectNoteInfo)
 noteContainter.addEventListener("click", loadNote)
 
 
