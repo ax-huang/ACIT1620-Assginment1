@@ -25,12 +25,12 @@ function darkThemeMode(){
     darkThemeButtonRef.classList.toggle("lightThemeButtonBG")
 }
 
-function removeButton(){
+function hideItems(){
     textAreaRef.style.visibility = "hidden"
     cancelSaveButtonRef.style.visibility = "hidden"
 }
 
-function visible(){
+function showItems(){
     let textAreaVisibility = textAreaRef.style.visibility
     let cancelSaveButtonVisibility = cancelSaveButtonRef.style.visibility
 
@@ -73,8 +73,8 @@ function loadNote(event){
     }
 }
 
-cancelButtonRef.addEventListener("click", removeButton)
-newNoteButtonRef.addEventListener("click", visible)
+cancelButtonRef.addEventListener("click", hideItems)
+newNoteButtonRef.addEventListener("click", showItems)
 darkThemeButtonRef.addEventListener("click", darkThemeMode)
 saveButtonRef.addEventListener("click", collectNoteInfo)
 noteContainter.addEventListener("click", loadNote)
